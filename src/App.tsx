@@ -19,11 +19,11 @@ import initPic2Path from "./media/i-b.jpg";
 import intuitaLogoPath from "./media/intuita-logo.png";
 import githubLogoPath from "./media/github-logo.png";
 
-// import initVid1Path from "./media/Intuita_Video_A_v3.mp4";
-// import initVid2Path from "./media/Intuita_Video_B_v3.mp4";
+import initVid1Path from "./media/Intuita_Video_A_v3.mp4";
+import initVid2Path from "./media/Intuita_Video_B_v3.mp4";
 
-import initVid1Path from "./media/light-vids/Intuita Video A v3-light.mp4";
-import initVid2Path from "./media/light-vids/Intuita Video B v3-light.mp4";
+// import initVid1Path from "./media/light-vids/Intuita Video A v3-light.mp4";
+// import initVid2Path from "./media/light-vids/Intuita Video B v3-light.mp4";
 
 import {
   ReactCompareSlider,
