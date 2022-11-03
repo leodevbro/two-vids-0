@@ -19,8 +19,11 @@ import initPic2Path from "./media/i-b.jpg";
 import intuitaLogoPath from "./media/intuita-logo.png";
 import githubLogoPath from "./media/github-logo.png";
 
-import initVid1Path from "./media/Intuita_Video_A_v3.mp4";
-import initVid2Path from "./media/Intuita_Video_B_v3.mp4";
+// import initVid1Path from "./media/Intuita_Video_A_v3.mp4";
+// import initVid2Path from "./media/Intuita_Video_B_v3.mp4";
+
+import initVid1Path from "./media/light-vids/Intuita Video A v3-light.mp4";
+import initVid2Path from "./media/light-vids/Intuita Video B v3-light.mp4";
 
 import {
   ReactCompareSlider,
@@ -170,11 +173,16 @@ const App: FunctionComponent = () => {
         // vid1Ref.current.currentTime = 0.08;
         // vid2Ref.current.currentTime = 0.08;
 
-        vid2Ref.current.play();
-        vid2Ref.current.pause();
+        try {
+          vid2Ref.current.play();
+          vid2Ref.current.pause();
 
-        vid1Ref.current.play();
-        vid1Ref.current.pause();
+          vid1Ref.current.play();
+          vid1Ref.current.pause();
+        } catch (err) {
+          alert(`error at pre-start: ${(err as any).message}`);
+          console.log(err);
+        }
 
         await waitSomeSeconds(0.5);
 
@@ -189,7 +197,7 @@ const App: FunctionComponent = () => {
           // vid1Ref.current.poster = undefined;
           // vid2Ref.current.poster = undefined;
         } catch (err) {
-          alert(err);
+          alert(`error at start: ${(err as any).message}`);
           console.log(err);
         }
 
